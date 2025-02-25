@@ -1,0 +1,11 @@
+<div class="weather-widget">
+    <h3>Current Weather in {{::data.weather.city}}</h3>
+    <div ng-if="data.weather">
+        <p><strong>Temperature:</strong> {{::data.weather.temperature}}°C</p>
+        <p><strong>Description:</strong> {{::data.weather.description}}</p>
+        <img ng-src="{{::data.weather.icon}}" alt="Weather Icon" />
+    </div>
+    <div ng-if="!data.weather">
+        <p>Loading weather data...</p>
+    </div>
+</div>
